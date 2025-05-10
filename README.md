@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Store It
 
-## Getting Started
+Store It is a modern file management application built with Next.js. It allows users to store, manage, and access their files with ease. The application is designed with a clean and intuitive user interface, making it simple for users to navigate and perform file-related operations.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **User Authentication**: Secure sign-in and sign-up functionality.
+- **File Management**: Upload, download, and organize files efficiently.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+- **Dark Mode**: Supports light and dark themes for better user experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: [Next.js](https://nextjs.org) for server-side rendering and React-based UI.
+- **Styling**: Tailwind CSS for utility-first styling and custom themes.
+- **Backend**: Appwrite for authentication, database, and file storage.
+- **State Management**: React Hook Form for form handling and validation.
+- **TypeScript**: Ensures type safety and better developer experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+To get started with the project, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone <repository-url>
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Navigate to the project directory:
 
-## Deploy on Vercel
+   ```bash
+   cd store_it
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Install dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm install
+   ```
+
+4. Set up environment variables:
+   Create a `.env` file in the root directory and add the following variables:
+
+   ```env
+   NEXT_PUBLIC_APPWRITE_ENDPOINT=<your-appwrite-endpoint>
+   NEXT_PUBLIC_APPWRITE_PROJECT=<your-appwrite-project-id>
+   NEXT_PUBLIC_APPWRITE_DATABASE=<your-appwrite-database-id>
+   NEXT_PUBLIC_APPWRITE_USERS_COLLECTION=<your-users-collection-id>
+   NEXT_PUBLIC_APPWRITE_FILES_COLLECTION=<your-files-collection-id>
+   NEXT_PUBLIC_APPWRITE_BUCKET=<your-appwrite-bucket-id>
+   NEXT_APPWRITE_KEY=<your-appwrite-secret-key>
+   ```
+
+5. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## Folder Structure
+
+- **app/**: Contains the Next.js pages and layouts.
+- **components/**: Reusable UI components.
+- **lib/**: Utility functions and Appwrite configurations.
+- **public/**: Static assets like images and icons.
+- **styles/**: Global CSS and Tailwind configurations.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+
+For any inquiries or feedback, please reach out to [your-email@example.com](mailto:your-email@example.com).
